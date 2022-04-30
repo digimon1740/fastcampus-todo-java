@@ -27,7 +27,7 @@ public class TodoController {
     }
 
     @GetMapping
-    public ResponseEntity<TodoListResponse> getAllNotDone() {
+    public ResponseEntity<TodoListResponse> getAll() {
         List<Todo> todos = todoService.findAll();
         return ResponseEntity.ok(TodoListResponse.of(todos));
     }
